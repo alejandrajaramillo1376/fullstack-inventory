@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "19c88ea3-7fbe-441d-bb23-6da697c20c2b",
+		"name": "inventory api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31820854"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alejandra\",\r\n    \"email\": \"alejandrajaramillo876@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5002/api/items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDI5ODg3MWJiMmNiMDdhNGY5ZGFjZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MTc3ODA5NCwiZXhwIjoxNzYxNzgxNjk0fQ.y-O2BlsizGRe915Ee1_wJAufd_r8cymjh7PT3SbSUIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5002/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,17 @@
+<div class="dashboard">
+  <h1>📦 Inventario</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

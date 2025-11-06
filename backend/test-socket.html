@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Socket test</h1>
+    <pre id="log"></pre>
+
+    <!-- Carga el cliente de Socket.IO -->
+    <script src="https://cdn.socket.io/4.9.0/socket.io.min.js"></script>
+
+    <script>
+      // ⚠️ Cambia el puerto al de tu backend (según tu caso, es 5000)
+      const socket = io('http://localhost:5000');
+      const log = document.getElementById('log');
+
+      socket.on('connect', () => {
+        log.innerText += '✅ Conectado al servidor\n';
+      });
+
+      socket.on('stock:update', (data) => {
+        log.innerText += '📦 stock:update ' + JSON.stringify(data) + '\n';
+      });
+
+      socket.on('disconnect', () => {
+        log.innerText += '❌ Desconectado\n';
+      });
+    </script>
+  </body>
+</html>
